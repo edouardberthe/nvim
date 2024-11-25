@@ -13,6 +13,16 @@ return {
     end,
   },
 
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = {
+      filters = {
+        custom = {
+          "^\\.git",
+        },
+      },
+    },
+  },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
