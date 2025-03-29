@@ -31,5 +31,17 @@ return {
   --      "html", "css"
   -- 		},
   -- 	},
-  -- },
+  {
+    "GustavEikaas/easy-dotnet.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+    config = function()
+      require("easy-dotnet").setup()
+    end,
+  }, -- },
+  {
+    "benomahony/uv.nvim",
+    config = function()
+      require("uv").setup()
+    end,
+  },
 }
