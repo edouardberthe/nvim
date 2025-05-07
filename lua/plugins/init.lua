@@ -12,25 +12,17 @@ return {
       require "configs.lspconfig"
     end,
   },
-
   {
     "nvim-tree/nvim-tree.lua",
     opts = {
       filters = {
         custom = {
-          "^\\.git",
+          -- "^\\.git",
         },
       },
     },
   },
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
+  "nvim-treesitter/nvim-treesitter-textobjects",
   {
     "GustavEikaas/easy-dotnet.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
@@ -39,9 +31,12 @@ return {
     end,
   }, -- },
   {
-    "benomahony/uv.nvim",
+    "lervag/vimtex",
+    lazy = false, -- pour charger immédiatement
     config = function()
-      require("uv").setup()
+      vim.g.vimtex_view_method = "skim"
+      -- vim.g.vimtex_compiler_method = "latexmk"
+      vim.g.tex_flavor = "latex"
     end,
   },
 }

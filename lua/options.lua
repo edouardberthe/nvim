@@ -8,7 +8,8 @@ local g = vim.g
 -- g.loaded_netrwPlugin = 1
 
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
+opt.cursorline = true
 
 opt.splitbelow = true
 opt.splitright = true
