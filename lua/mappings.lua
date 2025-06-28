@@ -17,3 +17,5 @@ map("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "window up" })
 map("n", "<leader>gg", "<cmd> LazyGit <cr>", { desc = "LazyGit" })
 
 map("n", "<leader><leader>", "<cmd>source $MYVIMRC<cr>")
+
+map("n", "<C-^>", "<ESC>")
