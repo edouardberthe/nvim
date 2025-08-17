@@ -12,17 +12,11 @@ return {
       require "configs.lspconfig"
     end,
   },
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = {
-      filters = {
-        custom = {
-          -- "^\\.git",
-        },
-      },
-    },
-  },
   "nvim-treesitter/nvim-treesitter-textobjects",
+  {
+    "lewis6991/gitsigns.nvim",
+    enabled = false,
+  },
   {
     "GustavEikaas/easy-dotnet.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
@@ -30,13 +24,4 @@ return {
       require("easy-dotnet").setup()
     end,
   }, -- },
-  {
-    "lervag/vimtex",
-    lazy = false, -- pour charger immédiatement
-    config = function()
-      vim.g.vimtex_view_method = "skim"
-      -- vim.g.vimtex_compiler_method = "latexmk"
-      vim.g.tex_flavor = "latex"
-    end,
-  },
 }

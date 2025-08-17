@@ -4,7 +4,13 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "pyright", "rust_analyzer" }
+local servers = {
+  "clangd",
+  "cssls",
+  "html",
+  "pyright",
+  "rust_analyzer",
+}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -19,8 +25,10 @@ end
 lspconfig.clangd.setup {
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
+    nvlsp.on_attach(client, bufnr)
   end,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
 }
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
