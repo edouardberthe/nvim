@@ -1,10 +1,11 @@
 local options = {
   formatters_by_ft = {
+    css = { "prettier" },
+    html = { "prettier" },
+    latex = { "texlab" },
     lua = { "stylua" },
     python = { "python", "black" },
     rust = { "rustfmt" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
   },
 
   -- format_on_save = {

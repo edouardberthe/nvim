@@ -3,7 +3,7 @@ return {
   opts = {
     defaults = {
       file_ignore_patterns = {
-        ".git",
+        ".git$",
         "__pycache__",
         ".pytest_cache",
         "%.pyc",
