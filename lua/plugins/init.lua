@@ -24,4 +24,17 @@ return {
     "svermeulen/vim-subversive",
     lazy = false,
   },
+  -- {
+  --   "GustavEikaas/easy-dotnet.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+  --   config = function()
+  --     require("easy-dotnet").setup()
+  --   end,
+  -- }, -- },
+  {
+    "latex-lsp/texlab",
+  },
+  {
+    "https://codeberg.org/FelipeLema/cmp-async-path",
+  },
 }

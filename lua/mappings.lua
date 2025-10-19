@@ -30,3 +30,5 @@ map("n", "s", "<plug>SubversiveSubstitute<cr>")
 
 -- map("n", "ss", vs.SubversiveSubstituteLine)
 -- map("n", "S", vs.SubversiveSubstituteToEndOfLine)
+
+map("n", "<C-n>", "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })

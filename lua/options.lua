@@ -34,3 +34,4 @@ opt.ignorecase = true
 opt.termguicolors = true
 
 g.mapleader = " "
+g.nvim_tree_auto_open = 1

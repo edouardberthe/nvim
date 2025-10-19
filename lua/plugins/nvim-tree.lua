@@ -1,9 +1,10 @@
 return {
   "nvim-tree/nvim-tree.lua",
+  enabled = false,
   opts = {
     filters = {
       custom = {
-        "^\\.git",
+        "^\\.git$",
         "^\\.__pycache__",
         "^\\.pytest_cache",
       },
