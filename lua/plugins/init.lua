@@ -11,10 +11,6 @@ return {
     end,
   },
   "nvim-treesitter/nvim-treesitter-textobjects",
-  -- {
-  --   "lewis6991/gitsigns.nvim",
-  --   enabled = false,
-  -- },
   "vladdoster/remember.nvim",
   {
     "svermeulen/vim-cutlass",
@@ -24,4 +20,6 @@ return {
     "svermeulen/vim-subversive",
     lazy = false,
   },
+  "latex-lsp/texlab",
+  "https://codeberg.org/FelipeLema/cmp-async-path",
 }

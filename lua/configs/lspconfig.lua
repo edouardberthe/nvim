@@ -1,42 +1,56 @@
-require("nvchad.configs.lspconfig").defaults()
+-- load defaults i.e lua_lsp
+local nvlsp = require "nvchad.configs.lspconfig"
+nvlsp.defaults()
 
-local nclsp = require "nvchad.configs.lspconfig"
-
+-- EXAMPLE
 local servers = {
   "clangd",
-  "texlab",
+  "cssls",
+  "html",
+  "pyright",
   "rust_analyzer",
+  "texlab",
 }
 
-for _, server in ipairs(servers) do
-  vim.lsp.config(server, {
-    on_attach = nclsp.on_attach,
-    on_init = nclsp.on_init,
-    capabilities = nclsp.capabilities,
-    root_markers = {
-      ".git",
-      "stylua.toml",
-      "readme.md",
-    },
+-- lsps with default config
+for _, lsp in ipairs(servers) do
+  vim.lsp.config(lsp, {
+    on_attach = nvlsp.on_attach,
+    on_init = nvlsp.on_init,
+    capabilities = nvlsp.capabilities,
   })
 end
 
 vim.lsp.config("clangd", {
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
-    nclsp.on_attach(client, bufnr)
+    nvlsp.on_attach(client, bufnr)
   end,
-  on_init = nclsp.on_init,
-  capabilities = nclsp.capabilities,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
 })
-
-vim.lsp.config("rust_analyzer", {
-  on_attach = function(client, bufnr)
-    -- Disable completion popup in Rust because very intrusive
-    client.server_capabilities.signatureHelpProvider = false
-  end,
+-- configuring single server, example: typescript
+-- lspconfig.ts_ls.setup {
+--   on_attach = nvlsp.on_attach,
+--   on_init = nvlsp.on_init,
+--   capabilities = nvlsp.capabilities,
+-- }
+--
+vim.lsp.config("texlab", {
+  settings = {
+    texlab = {
+      build = {
+        executable = "tectonic",
+        args = {
+          "-X",
+          "compile",
+          "%f",
+          "--synctex",
+          "--keep-logs",
+          "--keep-intermediates",
+        },
+        onSave = true, -- (optionnel) compile à chaque sauvegarde
+      },
+    },
+  },
 })
-
-vim.lsp.enable "clangd"
-vim.lsp.enable "texlab"
-vim.lsp.enable "rust_analyzer"

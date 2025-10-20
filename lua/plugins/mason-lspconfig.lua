@@ -1,17 +1,19 @@
 return {
   "williamboman/mason-lspconfig.nvim",
+  lazy = false,
   opts = {
     ensure_installed = {
       -- C++
       "clangd",
 
+      -- LaTeX
+      "texlab",
+
       -- lua
-      "lua_js",
+      "lua_ls",
 
       -- python
-      "black",
       "ruff",
-      "mypy",
       "pyright", -- require npm
     },
   },
