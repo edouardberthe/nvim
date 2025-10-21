@@ -12,8 +12,11 @@ return {
   },
   "vladdoster/remember.nvim",
   {
-    "svermeulen/vim-cutlass",
+    "gbprod/cutlass.nvim",
     lazy = false,
+    opts = {
+      cut_key = "x",
+    },
   },
   {
     "svermeulen/vim-subversive",
