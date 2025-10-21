@@ -10,7 +10,6 @@ return {
       require "configs.lspconfig"
     end,
   },
-  "nvim-treesitter/nvim-treesitter-textobjects",
   "vladdoster/remember.nvim",
   {
     "svermeulen/vim-cutlass",
