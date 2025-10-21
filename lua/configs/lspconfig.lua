@@ -1,41 +1,35 @@
--- load defaults i.e lua_lsp
-local nvlsp = require "nvchad.configs.lspconfig"
-nvlsp.defaults()
+local nclsp = require "nvchad.configs.lspconfig"
 
--- EXAMPLE
+nclsp.defaults()
+
 local servers = {
   "clangd",
-  "cssls",
-  "html",
-  "pyright",
   "rust_analyzer",
   "texlab",
 }
 
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  vim.lsp.config(lsp, {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
+for _, server in ipairs(servers) do
+  vim.lsp.config(server, {
+    on_attach = nclsp.on_attach,
+    on_init = nclsp.on_init,
+    capabilities = nclsp.capabilities,
+    root_markers = {
+      ".git",
+      "stylua.toml",
+      "README.md",
+    },
   })
 end
 
 vim.lsp.config("clangd", {
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
-    nvlsp.on_attach(client, bufnr)
+    nclsp.on_attach(client, bufnr)
   end,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
+  on_init = nclsp.on_init,
+  capabilities = nclsp.capabilities,
 })
--- configuring single server, example: typescript
--- lspconfig.ts_ls.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }
---
+
 vim.lsp.config("texlab", {
   settings = {
     texlab = {
