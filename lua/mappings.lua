@@ -20,7 +20,6 @@ map("n", "<leader><leader>", "<cmd>source $MYVIMRC<cr>")
 
 map("n", "<C-^>", "<ESC>")
 
-
 -- substitute.nvim
 map("n", "s", require("substitute").operator, { noremap = true })
 map("n", "ss", require("substitute").line, { noremap = true })

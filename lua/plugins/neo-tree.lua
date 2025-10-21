@@ -7,6 +7,7 @@ return {
       "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons", -- optional, but recommended
     },
+    lazy = false, -- neo-tree will lazily load itself
     window = {
       mappings = {
         ["P"] = {
@@ -22,6 +23,5 @@ return {
         ["<C-f>"] = { "scroll_preview", config = { direction = -10 } },
       },
     },
-    lazy = false, -- neo-tree will lazily load itself
   },
 }

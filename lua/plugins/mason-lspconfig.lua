@@ -1,6 +1,9 @@
 return {
-  "williamboman/mason-lspconfig.nvim",
-  lazy = false,
+  "mason-org/mason-lspconfig.nvim",
+  dependencies = {
+    "mason-org/mason.nvim",
+    "neovim/nvim-lspconfig",
+  },
   opts = {
     ensure_installed = {
       -- C++
@@ -10,11 +13,16 @@ return {
       "texlab",
 
       -- lua
-      "lua_ls",
+      "lua-language-server",
 
       -- python
-      "ruff",
+      "black",
+      "mypy",
       "pyright", -- require npm
+      "ruff",
+
+      -- rust
+      "rust_analyzer",
     },
   },
 }
