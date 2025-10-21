@@ -4,7 +4,7 @@ local options = {
     html = { "prettier" },
     latex = { "texlab" },
     lua = { "stylua" },
-    python = { "python", "black" },
+    python = { "black" },
     rust = { "rustfmt" },
   },
 
