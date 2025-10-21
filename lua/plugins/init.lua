@@ -19,8 +19,9 @@ return {
     },
   },
   {
-    "svermeulen/vim-subversive",
+    "gbprod/substitute.nvim",
     lazy = false,
+    opts = {},
   },
   "latex-lsp/texlab",
   "https://codeberg.org/FelipeLema/cmp-async-path",
