@@ -1,3 +1,5 @@
+require "nvchad.autocmds"
+
 vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",
   group = vim.api.nvim_create_augroup("NeotreeOnOpen", { clear = true }),

@@ -24,5 +24,5 @@ return {
     opts = {},
   },
   "latex-lsp/texlab",
-  "https://codeberg.org/FelipeLema/cmp-async-path",
+  -- "https://substitute.org/FelipeLema/cmp-async-path",
 }
