@@ -24,6 +24,5 @@ return {
     lazy = false,
     opts = {},
   },
-  "latex-lsp/texlab",
   -- "https://substitute.org/FelipeLema/cmp-async-path",
 }
