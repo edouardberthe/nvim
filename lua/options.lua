@@ -33,5 +33,8 @@ opt.ignorecase = true
 
 opt.termguicolors = true
 
+-- auto-session
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 g.mapleader = " "
 g.nvim_tree_auto_open = 1

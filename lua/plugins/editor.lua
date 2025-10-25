@@ -13,11 +13,21 @@ return {
   },
   {
     "kylechui/nvim-surround",
+    lazy = false,
     version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
-    -- opts = {},
-    config = function()
-      require("nvim-surround").setup()
-    end,
+    opts = {},
+  },
+  {
+    "nvim-mini/mini.ai",
+    opts = {},
+  },
+  {
+    "smjonas/inc-rename.nvim",
+    opts = {},
+    lazy = false,
+    -- config = function()
+    --   require("inc-rename").setup()
+    -- end,
   },
 }

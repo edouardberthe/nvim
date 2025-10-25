@@ -10,3 +10,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   callback = function()
+--     -- Do not open if a file has been passed in argument
+--     if vim.fn.argc() == 0 then
+--       require("nvim-tree.api").tree.open()
+--     end
+--   end,
+-- })

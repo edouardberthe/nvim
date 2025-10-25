@@ -1,6 +1,7 @@
 return {
   {
     "mason-org/mason.nvim",
+    opts = {},
   },
   {
     "mason-org/mason-lspconfig.nvim",
@@ -8,27 +9,7 @@ return {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
     },
-    opts = {
-      ensure_installed = {
-        -- C++
-        "clangd",
-
-        -- LaTeX
-        "texlab",
-
-        -- lua
-        "lua-language-server",
-
-        -- python
-        "black",
-        "mypy",
-        "pyright", -- require npm
-        "ruff",
-
-        -- rust
-        "rust_analyzer",
-      },
-    },
+    opts = require "configs.mason-lspconfig",
   },
   {
     "jay-babu/mason-null-ls.nvim",
@@ -37,13 +18,6 @@ return {
       "mason-org/mason.nvim",
       "nvimtools/none-ls.nvim",
     },
-    opts = {
-      ensure_installed = {
-        "black",
-        "ruff",
-        "mypy",
-      },
-    },
-    automatic_installation = true,
+    opts = require "configs.mason-null-ls",
   },
 }

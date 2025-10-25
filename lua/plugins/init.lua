@@ -10,5 +10,4 @@ return {
       require "configs.lspconfig"
     end,
   },
-  -- "https://substitute.org/FelipeLema/cmp-async-path",
 }

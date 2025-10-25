@@ -4,7 +4,7 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
   opts = {
-    ensure_installed = { "lua", "vim", "python" },
+    ensure_installed = { "lua", "python", "rust" },
 
     highlight = { enable = true },
     indent = { enable = true },

@@ -28,3 +28,10 @@ map("x", "s", require("substitute").visual, { noremap = true })
 
 -- neo-tree
 map("n", "<C-n>", "<cmd>Neotree toggle<cr>", { desc = "Neotree toggle" })
+vim.keymap.del("n", "<leader>e")
+
+-- inc-rename
+-- map("n", "<leader>rn", ":IncRename ")
+map("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand "<cword>"
+end, { expr = true, desc = "IncRename" })
