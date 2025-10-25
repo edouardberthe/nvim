@@ -10,6 +10,5 @@ return {
       require "configs.lspconfig"
     end,
   },
-  "vladdoster/remember.nvim",
   -- "https://substitute.org/FelipeLema/cmp-async-path",
 }
