@@ -12,17 +12,5 @@ return {
     end,
   },
   "vladdoster/remember.nvim",
-  {
-    "gbprod/cutlass.nvim",
-    lazy = false,
-    opts = {
-      cut_key = "x",
-    },
-  },
-  {
-    "gbprod/substitute.nvim",
-    lazy = false,
-    opts = {},
-  },
   -- "https://substitute.org/FelipeLema/cmp-async-path",
 }
