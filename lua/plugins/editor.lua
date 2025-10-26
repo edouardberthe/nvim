@@ -20,14 +20,12 @@ return {
   },
   {
     "nvim-mini/mini.ai",
+    lazy = false,
     opts = {},
   },
   {
     "smjonas/inc-rename.nvim",
     opts = {},
     lazy = false,
-    -- config = function()
-    --   require("inc-rename").setup()
-    -- end,
   },
 }

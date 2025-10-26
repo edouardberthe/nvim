@@ -31,8 +31,6 @@ return {
       -- "nvim-mini/mini.pick", -- optional
       -- "folke/snacks.nvim", -- optional
     },
-    config = function()
-      require("neogit").setup()
-    end,
+    opts = {},
   },
 }
