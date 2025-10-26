@@ -6,6 +6,7 @@ local servers = {
   "clangd",
   "rust_analyzer",
   "texlab",
+  "ruff",
 }
 
 for _, server in ipairs(servers) do
@@ -48,3 +49,7 @@ vim.lsp.config("texlab", {
     },
   },
 })
+
+for _, server in pairs(servers) do
+  vim.lsp.enable(server)
+end

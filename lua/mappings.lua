@@ -35,3 +35,5 @@ vim.keymap.del("n", "<leader>e")
 map("n", "<leader>rn", function()
   return ":IncRename " .. vim.fn.expand "<cword>"
 end, { expr = true, desc = "IncRename" })
+
+map("n", "<leader>fn", "<cmd>Telescope notify<cr>", { desc = "telescope find notify" })
