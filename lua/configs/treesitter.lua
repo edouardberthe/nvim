@@ -1,5 +1,5 @@
 return {
-  ensure_installed = { "lua", "python", "rust" },
+  ensure_installed = { "bash", "lua", "python", "regex", "rust" },
 
   highlight = { enable = true },
   indent = { enable = true },
