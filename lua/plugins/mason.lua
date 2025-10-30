@@ -1,7 +1,12 @@
 return {
   {
     "mason-org/mason.nvim",
+    lazy = false,
     opts = {},
+    build = ":MasonInstallAll",
+    dependencies = {
+      "NvChad/NvChad",
+    },
   },
   {
     "mason-org/mason-lspconfig.nvim",

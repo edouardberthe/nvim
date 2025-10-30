@@ -1,4 +1,10 @@
 return {
+  -- Telescope
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = require "configs.telescope-config",
+  },
+  -- Noice
   {
     "folke/noice.nvim",
     -- enabled = false,
@@ -13,6 +19,7 @@ return {
       "rcarriga/nvim-notify",
     },
   },
+  -- Project tree explorers
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
