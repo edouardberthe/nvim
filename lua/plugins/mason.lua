@@ -1,10 +1,12 @@
 return {
   {
     "mason-org/mason.nvim",
+    lazy = false,
     opts = {},
   },
   {
     "mason-org/mason-lspconfig.nvim",
+    lazy = false,
     dependencies = {
       "mason-org/mason.nvim",
       "neovim/nvim-lspconfig",
@@ -13,6 +15,7 @@ return {
   },
   {
     "jay-babu/mason-null-ls.nvim",
+    lazy = false,
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "mason-org/mason.nvim",
