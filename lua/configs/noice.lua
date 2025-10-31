@@ -7,6 +7,14 @@ return {
       ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
     },
   },
+  messages = {
+    enabled = false,
+    view = "notify",
+    view_error = "notify",
+    view_warn = "notify",
+    view_history = "notify",
+    view_search = "virtualtext",
+  },
   -- you can enable a preset for easier configuration
   presets = {
     bottom_search = true, -- use a classic bottom cmdline for search
@@ -15,25 +23,25 @@ return {
     inc_rename = true, -- enables an input dialog for inc-rename.nvim
     lsp_doc_border = true, -- add a border to hover docs and signature help
   },
-  routes = {
-    {
-      filter = {
-        event = "msg_show",
-        kind = "",
-        find = "written",
-      },
-      opts = { skip = true },
-    },
-    {
-      filter = {
-        event = "msg_show",
-        kind = "search_count",
-      },
-      opts = { skip = true },
-    },
-    {
-      view = "notify",
-      filter = { event = "msg_showmode" },
-    },
-  },
+  -- routes = {
+  -- {
+  --   filter = {
+  --     event = "msg_show",
+  --     kind = "",
+  --     find = "written",
+  --   },
+  --   opts = { skip = true },
+  -- },
+  -- {
+  --   filter = {
+  --     event = "msg_show",
+  --     kind = "search_count",
+  --   },
+  --   opts = { skip = true },
+  -- },
+  -- {
+  --   view = "notify",
+  --   filter = { event = "msg_showmode" },
+  -- },
+  -- },
 }
